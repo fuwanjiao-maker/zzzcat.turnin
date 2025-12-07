@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Turn In Privacy Policy - Learn how we protect your privacy and handle your data.">
+    <title>Privacy Policy - Turn In</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+            border-left: 4px solid #007AFF;
+        }
+        
+        .contact-section h2 {
+            margin-top: 0;
+            color: #007AFF;
+        }
+        
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .language-switcher a {
+            color: #007AFF;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+        
+        .language-switcher a:hover {
+            text-decoration: underline;
+        }
+        
+        .language-switcher a.active {
+            font-weight: 600;
+            color: #0051D5;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 18px;
+            }
+            
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switcher">
+            <a href="#en" class="active" onclick="showLanguage('en')">English</a>
+            <a href="#zh" onclick="showLanguage('zh')">中文</a>
+        </div>
+        
+        <!-- English Version -->
+        <div id="content-en">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: <span id="update-date-en"></span></p>
+            
+            <h2>1. Information We Collect</h2>
+            <p>Turn In is designed with your privacy in mind. We only collect the emotion data you choose to record. All data is stored locally on your device and is never transmitted to our servers.</p>
+            
+            <h2>2. How We Use Your Information</h2>
+            <p>The emotion data you record is used solely to provide you with personalized insights and visualizations within the app. We do not share, sell, or use your data for any other purpose.</p>
+            
+            <h2>3. Data Storage</h2>
+            <p>All your emotion records are stored locally on your device using secure storage. We do not have access to your data, and it remains under your complete control.</p>
+            
+            <h2>4. Data Security</h2>
+            <p>We use industry-standard encryption to protect your data on your device. Since all data is stored locally, you have full control over your information.</p>
+            
+            <h2>5. Your Rights</h2>
+            <p>You can delete your emotion records at any time through the app by tapping on a recorded date in the calendar and selecting the delete option. All data is stored locally on your device using secure storage. While we do not have access to your data, please note that data stored in the device's secure storage system may persist even after app deletion until the device is reset.</p>
+            
+            <h2>6. Age Restriction</h2>
+            <p>Turn In is intended for users aged 17 and above. We do not knowingly collect personal information from users under the age of 17. If you are under 17, please do not use this app. If we become aware that we have collected personal information from a user under 17, we will take steps to delete such information.</p>
+            
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us through the app's feedback feature.</p>
+            </div>
+        </div>
+        
+        <!-- Chinese Version -->
+        <div id="content-zh" style="display: none;">
+            <h1>隐私政策</h1>
+            <p class="last-updated">最后更新：<span id="update-date-zh"></span></p>
+            
+            <h2>1. 我们收集的信息</h2>
+            <p>Turn In 的设计充分考虑了您的隐私。我们只收集您选择记录的情绪数据。所有数据都存储在您的设备本地，永远不会传输到我们的服务器。</p>
+            
+            <h2>2. 我们如何使用您的信息</h2>
+            <p>您记录的情绪数据仅用于在应用内为您提供个性化的洞察和可视化。我们不会分享、出售或将您的数据用于任何其他目的。</p>
+            
+            <h2>3. 数据存储</h2>
+            <p>您的所有情绪记录都使用安全存储方式存储在您的设备本地。我们无法访问您的数据，数据完全由您控制。</p>
+            
+            <h2>4. 数据安全</h2>
+            <p>我们使用行业标准的加密技术来保护您设备上的数据。由于所有数据都存储在本地，您对信息拥有完全的控制权。</p>
+            
+            <h2>5. 您的权利</h2>
+            <p>您可以随时通过应用删除您的情绪记录。在日历页面中点击已记录的日期，然后选择删除选项即可删除该记录。所有数据都使用安全存储方式存储在您的设备本地。虽然我们无法访问您的数据，但请注意，存储在设备安全存储系统中的数据可能在删除应用后仍然保留，直到设备重置。</p>
+            
+            <h2>6. 年龄限制</h2>
+            <p>Turn In 仅限 17 岁及以上用户使用。我们不会故意收集 17 岁以下用户的个人信息。如果您未满 17 岁，请不要使用本应用。如果我们发现收集了 17 岁以下用户的个人信息，我们将采取措施删除此类信息。</p>
+            
+            <div class="contact-section">
+                <h2>联系我们</h2>
+                <p>如果您对此隐私政策有任何疑问，请通过应用的反馈功能联系我们。</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Set update date
+        const today = new Date();
+        const dateStr = today.getFullYear() + '-' + 
+                       String(today.getMonth() + 1).padStart(2, '0') + '-' + 
+                       String(today.getDate()).padStart(2, '0');
+        document.getElementById('update-date-en').textContent = dateStr;
+        document.getElementById('update-date-zh').textContent = dateStr;
+        
+        // Language switcher
+        function showLanguage(lang) {
+            // Hide all content
+            document.getElementById('content-en').style.display = 'none';
+            document.getElementById('content-zh').style.display = 'none';
+            
+            // Show selected content
+            document.getElementById('content-' + lang).style.display = 'block';
+            
+            // Update active link
+            document.querySelectorAll('.language-switcher a').forEach(a => {
+                a.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        
+        // Set default language based on browser
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang.startsWith('zh')) {
+            showLanguage('zh');
+            document.querySelectorAll('.language-switcher a')[1].classList.add('active');
+            document.querySelectorAll('.language-switcher a')[0].classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+
