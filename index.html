@@ -14,19 +14,50 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #0c0e2a 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
             padding: 20px;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #007AFF, #5AC8FA, #007AFF);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .app-name {
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
         
         h1 {
@@ -34,6 +65,7 @@
             font-size: 32px;
             margin-bottom: 10px;
             font-weight: 700;
+            letter-spacing: -0.3px;
         }
         
         .last-updated {
@@ -42,72 +74,178 @@
             margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .last-updated::before {
+            content: '📅';
+            font-size: 16px;
         }
         
         h2 {
             color: #2c3e50;
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            font-size: 22px;
+            margin-top: 35px;
+            margin-bottom: 18px;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        h2::before {
+            content: '✨';
+            font-size: 20px;
         }
         
         p {
             color: #555;
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             text-align: justify;
+            line-height: 1.8;
+        }
+        
+        .section-content {
+            background-color: #f8f9fa;
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007AFF;
+            transition: all 0.3s ease;
+        }
+        
+        .section-content:hover {
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.1);
+            transform: translateX(4px);
         }
         
         .contact-section {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 30px;
-            border-left: 4px solid #007AFF;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            border: 2px solid #007AFF;
+            box-shadow: 0 4px 16px rgba(0, 122, 255, 0.15);
         }
         
         .contact-section h2 {
             margin-top: 0;
             color: #007AFF;
+            border-bottom: none;
+        }
+        
+        .contact-section h2::before {
+            content: '📧';
+        }
+        
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 12px;
+            padding: 12px 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 2px solid #007AFF;
+            transition: all 0.3s ease;
+        }
+        
+        .email-link:hover {
+            background-color: #007AFF;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+        
+        .email-link::before {
+            content: '✉️';
+            font-size: 20px;
         }
         
         .language-switcher {
             text-align: right;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding: 12px 16px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            display: inline-block;
+            float: right;
         }
         
         .language-switcher a {
             color: #007AFF;
             text-decoration: none;
-            margin-left: 15px;
-            font-size: 14px;
+            margin-left: 16px;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
         
         .language-switcher a:hover {
-            text-decoration: underline;
+            background-color: #e9ecef;
+            text-decoration: none;
         }
         
         .language-switcher a.active {
             font-weight: 600;
-            color: #0051D5;
+            color: #ffffff;
+            background-color: #007AFF;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ff9500;
+            margin: 20px 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #8b4513;
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 20px;
+                padding: 30px 20px;
+            }
+            
+            .app-name {
+                font-size: 28px;
             }
             
             h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
             
             h2 {
-                font-size: 18px;
+                font-size: 20px;
             }
             
             p {
-                font-size: 14px;
+                font-size: 15px;
+            }
+            
+            .language-switcher {
+                float: none;
+                display: block;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+            
+            .language-switcher a {
+                margin: 0 8px;
             }
         }
     </style>
@@ -121,59 +259,93 @@
         
         <!-- English Version -->
         <div id="content-en">
-            <h1>Privacy Policy</h1>
+            <div class="header">
+                <div class="app-name">Turn In</div>
+                <h1>Privacy Policy</h1>
+            </div>
             <p class="last-updated">Last Updated: <span id="update-date-en"></span></p>
             
-            <h2>1. Information We Collect</h2>
-            <p>Turn In is designed with your privacy in mind. We only collect the emotion data you choose to record. All data is stored locally on your device and is never transmitted to our servers.</p>
+            <div class="section-content">
+                <h2>1. Information We Collect</h2>
+                <p>Turn In is designed with your privacy in mind. We only collect the emotion data you choose to record. All data is stored locally on your device and is never transmitted to our servers.</p>
+            </div>
             
-            <h2>2. How We Use Your Information</h2>
-            <p>The emotion data you record is used solely to provide you with personalized insights and visualizations within the app. We do not share, sell, or use your data for any other purpose.</p>
+            <div class="section-content">
+                <h2>2. How We Use Your Information</h2>
+                <p>The emotion data you record is used solely to provide you with personalized insights and visualizations within the app. We do not share, sell, or use your data for any other purpose.</p>
+            </div>
             
-            <h2>3. Data Storage</h2>
-            <p>All your emotion records are stored locally on your device using secure storage. We do not have access to your data, and it remains under your complete control.</p>
+            <div class="section-content">
+                <h2>3. Data Storage</h2>
+                <p>All your emotion records are stored locally on your device using secure storage. We do not have access to your data, and it remains under your complete control.</p>
+            </div>
             
-            <h2>4. Data Security</h2>
-            <p>We use industry-standard encryption to protect your data on your device. Since all data is stored locally, you have full control over your information.</p>
+            <div class="section-content">
+                <h2>4. Data Security</h2>
+                <p>We use industry-standard encryption to protect your data on your device. Since all data is stored locally, you have full control over your information.</p>
+            </div>
             
-            <h2>5. Your Rights</h2>
-            <p>You can delete your emotion records at any time through the app by tapping on a recorded date in the calendar and selecting the delete option. All data is stored locally on your device using secure storage. While we do not have access to your data, please note that data stored in the device's secure storage system may persist even after app deletion until the device is reset.</p>
+            <div class="section-content">
+                <h2>5. Your Rights</h2>
+                <p>You can delete your emotion records at any time through the app by tapping on a recorded date in the calendar and selecting the delete option. All data is stored locally on your device using secure storage. While we do not have access to your data, please note that data stored in the device's secure storage system may persist even after app deletion until the device is reset.</p>
+            </div>
             
-            <h2>6. Age Restriction</h2>
-            <p>Turn In is intended for users aged 17 and above. We do not knowingly collect personal information from users under the age of 17. If you are under 17, please do not use this app. If we become aware that we have collected personal information from a user under 17, we will take steps to delete such information.</p>
+            <div class="section-content">
+                <h2>6. Age Restriction</h2>
+                <p>Turn In is intended for users aged 17 and above. We do not knowingly collect personal information from users under the age of 17. If you are under 17, please do not use this app. If we become aware that we have collected personal information from a user under 17, we will take steps to delete such information.</p>
+            </div>
             
             <div class="contact-section">
                 <h2>Contact Us</h2>
-                <p>If you have any questions about this Privacy Policy, please contact us through the app's feedback feature.</p>
+                <p>If you have any questions about this Privacy Policy, please feel free to contact us:</p>
+                <a href="mailto:fuwanjiao@gmail.com" class="email-link">fuwanjiao@gmail.com</a>
+                <p style="margin-top: 16px; color: #666; font-size: 14px;">You can also reach us through the app's feedback feature.</p>
             </div>
         </div>
         
         <!-- Chinese Version -->
         <div id="content-zh" style="display: none;">
-            <h1>隐私政策</h1>
+            <div class="header">
+                <div class="app-name">Turn In</div>
+                <h1>隐私政策</h1>
+            </div>
             <p class="last-updated">最后更新：<span id="update-date-zh"></span></p>
             
-            <h2>1. 我们收集的信息</h2>
-            <p>Turn In 的设计充分考虑了您的隐私。我们只收集您选择记录的情绪数据。所有数据都存储在您的设备本地，永远不会传输到我们的服务器。</p>
+            <div class="section-content">
+                <h2>1. 我们收集的信息</h2>
+                <p>Turn In 的设计充分考虑了您的隐私。我们只收集您选择记录的情绪数据。所有数据都存储在您的设备本地，永远不会传输到我们的服务器。</p>
+            </div>
             
-            <h2>2. 我们如何使用您的信息</h2>
-            <p>您记录的情绪数据仅用于在应用内为您提供个性化的洞察和可视化。我们不会分享、出售或将您的数据用于任何其他目的。</p>
+            <div class="section-content">
+                <h2>2. 我们如何使用您的信息</h2>
+                <p>您记录的情绪数据仅用于在应用内为您提供个性化的洞察和可视化。我们不会分享、出售或将您的数据用于任何其他目的。</p>
+            </div>
             
-            <h2>3. 数据存储</h2>
-            <p>您的所有情绪记录都使用安全存储方式存储在您的设备本地。我们无法访问您的数据，数据完全由您控制。</p>
+            <div class="section-content">
+                <h2>3. 数据存储</h2>
+                <p>您的所有情绪记录都使用安全存储方式存储在您的设备本地。我们无法访问您的数据，数据完全由您控制。</p>
+            </div>
             
-            <h2>4. 数据安全</h2>
-            <p>我们使用行业标准的加密技术来保护您设备上的数据。由于所有数据都存储在本地，您对信息拥有完全的控制权。</p>
+            <div class="section-content">
+                <h2>4. 数据安全</h2>
+                <p>我们使用行业标准的加密技术来保护您设备上的数据。由于所有数据都存储在本地，您对信息拥有完全的控制权。</p>
+            </div>
             
-            <h2>5. 您的权利</h2>
-            <p>您可以随时通过应用删除您的情绪记录。在日历页面中点击已记录的日期，然后选择删除选项即可删除该记录。所有数据都使用安全存储方式存储在您的设备本地。虽然我们无法访问您的数据，但请注意，存储在设备安全存储系统中的数据可能在删除应用后仍然保留，直到设备重置。</p>
+            <div class="section-content">
+                <h2>5. 您的权利</h2>
+                <p>您可以随时通过应用删除您的情绪记录。在日历页面中点击已记录的日期，然后选择删除选项即可删除该记录。所有数据都使用安全存储方式存储在您的设备本地。虽然我们无法访问您的数据，但请注意，存储在设备安全存储系统中的数据可能在删除应用后仍然保留，直到设备重置。</p>
+            </div>
             
-            <h2>6. 年龄限制</h2>
-            <p>Turn In 仅限 17 岁及以上用户使用。我们不会故意收集 17 岁以下用户的个人信息。如果您未满 17 岁，请不要使用本应用。如果我们发现收集了 17 岁以下用户的个人信息，我们将采取措施删除此类信息。</p>
+            <div class="section-content">
+                <h2>6. 年龄限制</h2>
+                <p>Turn In 仅限 17 岁及以上用户使用。我们不会故意收集 17 岁以下用户的个人信息。如果您未满 17 岁，请不要使用本应用。如果我们发现收集了 17 岁以下用户的个人信息，我们将采取措施删除此类信息。</p>
+            </div>
             
             <div class="contact-section">
                 <h2>联系我们</h2>
-                <p>如果您对此隐私政策有任何疑问，请通过应用的反馈功能联系我们。</p>
+                <p>如果您对此隐私政策有任何疑问，欢迎随时联系我们：</p>
+                <a href="mailto:fuwanjiao@gmail.com" class="email-link">fuwanjiao@gmail.com</a>
+                <p style="margin-top: 16px; color: #666; font-size: 14px;">您也可以通过应用的反馈功能联系我们。</p>
             </div>
         </div>
     </div>
